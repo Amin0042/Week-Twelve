@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Blue-950: hsl(233, 26%, 24%);
+  --Green-500: hsl(136, 64%, 51%);
+  --Cyan-400: hsl(192, 69%, 51%);
+  --Gray-600: hsl(233, 8%, 62%);
+  --Gray-100: hsl(220, 16%, 96%);
+  --Gray-50: hsl(0, 0%, 98%);
+  --White: hsl(0, 100%, 100%);
+  --f-normal: 1.125rem;
+  --f-large: 2.25rem;
+  --fw-normal: 300;
+  --fw-medium: 400;
+  --fw-large: 700;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  font-weight: var(--fw-normal);
+  font-size: var(--f-normal);
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  position: relative;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--Blue-950);
+  text-align: center;
+  padding: 2rem;
+  gap: 2rem;
+  position: relative;
+}
+.back {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url(./images/bg-intro-mobile.svg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
