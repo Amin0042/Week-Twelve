@@ -107,3 +107,78 @@ h3 {
   font-weight: var(--fw-large);
   background: linear-gradient(var(--Green-500), var(--Cyan-400));
 }
+.second {
+  margin: 5rem 2rem;
+  text-align: center;
+}
+.articles {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 4 1fr;
+  margin-bottom: 4rem;
+}
+.articles h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.article img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.article h4 {
+  margin-bottom: 2rem;
+}
+.item {
+  margin-bottom: 2rem;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Blue-950);
+  color: var(--White);
+}
+.footer-icons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.footer-items {
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .btn-green {
+  width: fit-content;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.copyright {
+  color: var(--Gray-600);
+  margin-bottom: 3rem;
+}
+.attribution {
+  background-color: var(--Blue-950);
+  text-align: center;
+  color: var(--White);
+}
+.logo-bottom {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
