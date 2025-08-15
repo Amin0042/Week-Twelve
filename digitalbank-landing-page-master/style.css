@@ -21,14 +21,38 @@ body {
   font-family: "Public Sans", sans-serif;
   font-weight: var(--fw-normal);
   font-size: var(--f-normal);
+  position: relative;
+}
+h1 {
+  font-size: var(--f-large);
+  font-weight: var(--fw-medium);
+}
+h2 {
+  font-size: var(--f-large);
+  font-weight: var(--fw-medium);
+}
+h3 {
+  font-size: var(--f-large);
+  font-weight: var(--fw-medium);
 }
 .navbar {
+  background: var(--White);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 3rem 1rem;
-  margin: 0 auto;
+  padding: 2rem 1rem;
+  z-index: +4;
   position: relative;
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  width: 110%; */
+}
+.navbar button {
+  border: none;
+  & :hover {
+    cursor: pointer;
+  }
 }
 .hero {
   display: flex;
@@ -42,18 +66,44 @@ body {
   gap: 2rem;
   position: relative;
 }
+.hero-image {
+  z-index: -1;
+  margin-bottom: 30rem;
+}
 .back {
-  top: 0;
+  z-index: -2;
+  width: 100%;
+  position: absolute;
+  top: -20%;
   left: 0;
+}
+.front {
+  width: 80%;
+  z-index: -2;
+  position: absolute;
+  top: -20%;
+  left: 10%;
+}
+/* .back {
+  top: 0;
+  left: 0
   position: absolute;
   background: url(./images/bg-intro-mobile.svg) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100%;
   z-index: -1;
-}
+} */
 .content {
   position: relative;
   z-index: 5;
   width: 100%;
+}
+.btn-green {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: var(--White);
+  font-weight: var(--fw-large);
+  background: linear-gradient(var(--Green-500), var(--Cyan-400));
 }
