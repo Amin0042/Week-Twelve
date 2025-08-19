@@ -12,7 +12,7 @@
   --Gray-50: hsl(0, 0%, 98%);
   --White: hsl(0, 100%, 100%);
   --f-normal: 1.125rem;
-  --f-large: 2.25rem;
+  --f-large: 3rem;
   --fw-normal: 300;
   --fw-medium: 400;
   --fw-large: 700;
@@ -22,18 +22,23 @@ body {
   font-weight: var(--fw-normal);
   font-size: var(--f-normal);
   position: relative;
+  background-color: var(--Gray-50);
 }
 h1 {
   font-size: var(--f-large);
   font-weight: var(--fw-medium);
 }
 h2 {
-  font-size: var(--f-large);
+  font-size: 2.5rem;
   font-weight: var(--fw-medium);
 }
 h3 {
-  font-size: var(--f-large);
+  font-size: 2rem;
   font-weight: var(--fw-medium);
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-large);
 }
 .navbar {
   background: var(--White);
@@ -48,6 +53,10 @@ h3 {
   right: 0;
   width: 110%; */
 }
+.nav-content {
+  display: none;
+  visibility: hidden;
+}
 .navbar button {
   border: none;
   & :hover {
@@ -59,7 +68,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: var(--Blue-950);
   text-align: center;
   padding: 2rem;
@@ -68,7 +77,10 @@ h3 {
 }
 .hero-image {
   z-index: -1;
-  margin-bottom: 30rem;
+}
+.hero-content {
+  z-index: -1;
+  margin-top: 25rem;
 }
 .back {
   z-index: -2;
@@ -110,6 +122,12 @@ h3 {
 .second {
   margin: 5rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.item > * {
+  margin-bottom: 2rem;
 }
 .articles {
   display: grid;
@@ -117,31 +135,26 @@ h3 {
   justify-content: center;
   grid-template-rows: 4 1fr;
   margin-bottom: 4rem;
+  gap: 1rem;
+}
+.article {
+  border-radius: 20px;
+  margin: 2rem 4rem;
 }
 .articles h2 {
-  text-align: center;
   margin-bottom: 4rem;
+  text-align: center;
 }
 .article img {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 2rem;
-  /* margin-left: 4rem;
-  margin-right: 4rem; */
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
-.article h4 {
-  margin-bottom: 2rem;
-}
+
 .article-item {
-  margin-bottom: 2rem;
   background-color: var(--White);
-  padding: 5rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
+  padding: 2rem;
+}
+.article-item > * {
+  margin-bottom: 1rem;
 }
 .footer {
   display: flex;
@@ -190,4 +203,29 @@ h3 {
 .logo-bottom {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+  }
+  .navbar > button {
+    display: none;
+  }
+  .navbar > .logo {
+    display: none;
+  }
+  .nav-content {
+    display: block;
+    visibility: visible;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
