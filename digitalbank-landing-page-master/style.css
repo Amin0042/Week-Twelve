@@ -40,9 +40,16 @@ h4 {
   font-size: 1.5rem;
   font-weight: var(--fw-large);
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  & :visited {
+    color: inherit;
+  }
+}
+
 .navbar {
   background: var(--White);
-
   width: 100%;
 }
 .mobile {
@@ -59,7 +66,7 @@ h4 {
   display: none;
   visibility: hidden;
 }
-.navbar button {
+.mobile button {
   border: none;
   & :hover {
     cursor: pointer;
@@ -250,6 +257,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     margin: 0 2rem;
+    padding: 2rem 1rem;
   }
   .nav {
     display: flex;
@@ -266,10 +274,30 @@ h4 {
   .second {
     background-color: var(--Gray-100);
     display: grid;
-    grid-template-columns: 4 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .second .title {
+    grid-column: 1/5;
+    justify-self: start;
+    text-align: left;
+    & > * {
+      margin-bottom: 1rem;
+    }
   }
   .second .item {
-    display: flex;
-    flex-direction: column;
+    justify-self: start;
+    text-align: left;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+  }
+  .articles h2 {
+    grid-column: 1/ 5;
+  }
+  .article {
+    margin: 0;
   }
 }
