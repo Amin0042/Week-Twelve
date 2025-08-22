@@ -42,16 +42,18 @@ h4 {
 }
 .navbar {
   background: var(--White);
+
+  width: 100%;
+}
+.mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem;
-  z-index: +4;
-  position: relative;
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  width: 110%; */
+  position: absolute;
+  background: var(--White);
+  width: 100%;
+  max-width: 100%;
 }
 .nav-content {
   display: none;
@@ -81,6 +83,11 @@ h4 {
 .hero-content {
   z-index: -1;
   margin-top: 25rem;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.hero-content > * {
+  margin-bottom: 2rem;
 }
 .back {
   z-index: -2;
@@ -233,7 +240,7 @@ h4 {
   .navbar > button {
     display: none;
   }
-  .navbar > .logo {
+  .mobile {
     display: none;
   }
   .nav-content {
@@ -251,18 +258,11 @@ h4 {
     padding: 0 5rem;
     gap: 2rem;
   }
-  .nav-link a {
+  .nav-link {
     color: var(--Gray-600);
-    text-decoration: none;
+    list-style: none;
   }
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    text-align: left;
-  }
+
   .second {
     background-color: var(--Gray-100);
     display: grid;
